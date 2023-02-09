@@ -1,14 +1,5 @@
-import logo from './logo.svg';
-import './index.css';
-import Header from './Component/Header';
-import Main from './Component/Main';
-import Cards from './Component/Card';
-import Footer from './Component/Footer';
 
-
-function App() {
-
-  const Messages = [
+const Messages = [
     {
         bookTitle:'Becoming Free Indeed',
         author:'Mary Pope Osborne ',
@@ -28,23 +19,5 @@ function App() {
         bookImage:'https://m.media-amazon.com/images/I/51neNJ95N-L._SX218_BO1,204,203,200_QL40_FMwebp_.jpg'
     }
 ]
-  
-  return (
-    <div className="App">
-        <Header />
-        <Main />
 
-        {
-          Messages.map((Book) => {
-            return (
-              <Cards bookTitle ={Book.bookTitle} author ={Book.author} description ={Book.description} bookImage ={Book.bookImage} />
-            )
-          })
-        }
-
-        <Footer />
-    </div>
-  );
-}
-
-export default App;
+export default Messages;
